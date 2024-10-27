@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time,day,date,month and years</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <div class="time"><span id="Hours">00</span><span>:</span><span id="Minutes">00</span><span>:</span><span id="Secundes">00</span></div>
+        <div class="days">
+            <div class="day">
+                <span id="dayNumber">0</span>
+                <span id="dayString">Noll</span>  
+            </div>
+            <div class="year">
+                <span id="month">Noll</span>
+                <span id="year">0000</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const Hours = document.getElementById("Hours")
+        const Minutes = document.getElementById("Minutes")
+        const Secundes = document.getElementById("Secundes")
+        const DayNumber = document.getElementById("dayNumber");
+        const DayString = document.getElementById("dayString");
+        const Month = document.getElementById("month");
+        const Year = document.getElementById("year");
+        const allMath = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+        const weekDay = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"] 
+        
+        setInterval(()=>{
+            let today =new Date();
+            Hours.innerHTML = today.getHours() 
+            Minutes.innerHTML = today.getMinutes()
+            Secundes.innerHTML = today.getSeconds()
+            DayNumber.innerHTML = today.getDate()
+            DayString.innerHTML = weekDay[today.getDay()]
+            Month.innerHTML = allMath[today.getMonth()] 
+            Year.innerHTML = today.getFullYear()
+        },1000)
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-weight: 1000;
+    font-size: 30px;
+}
+
+body{
+    background-color: #E0F7FA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+.container{
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.days{
+    background-color:  #FFD700;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    bottom: 0;
+    border-radius: 0px 0px 10px 10px;
+}
+.day{
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    width: 65%;
+}
+
+.year{
+    width: 35%;
+    background-color:  #FF4500;
+    right: initial;
+    border-radius: 0 0px 10px 0;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.time{
+    width: 100%;
+    height: 30%;
+    background-color: #6A5ACD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+    font-size: 500px;
+}
+
+#dayNumber{
+    margin-left: 10%;
+    font-size: 80px;
+}
+
+#year{
+    font-size: 60px;
+}
+
+#month{
+    margin-left: 10px;
+}
